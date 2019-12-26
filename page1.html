@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   .game1 {
+        padding-top:  50px;
+        padding-left: 205px;
+        display: grid;
+        grid-template-columns: 5fr 8fr;
+    }
+    h4 {
+    padding-bottom: 15px;
+    color: orange;
+    font-size: 30px;
+    font-family: 'Capsule X Pro Medium Regular';
+    }
+   .imgtext{
+    padding-top: 20px;
+    padding-right: 205px;
+    padding-left: 30px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    .row > .column {
+      padding: 0 8px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column {
+      float: left;
+      width: 25%;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: black;
+    }
+
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #999;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .cursor {
+      cursor: pointer;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    img {
+      margin-bottom: -4px;
+    }
+
+    .caption-container {
+      text-align: center;
+      background-color: black;
+      padding: 2px 16px;
+      color: white;
+    }
+
+    .demo {
+      opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+    }
+
+    img.hover-shadow {
+      transition: 0.3s;
+    }
+
+    .hover-shadow:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .gallery {
+        padding-top: 20px;
+        padding-left: 220px;
+        padding-bottom: 100px;
+    }
+    footer {
+        padding-bottom: none;
+        padding-top: 200px;
+        display:none;
+    }
+    .button {
+      background-color: orange;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      float: right;
+      margin-right: 205px;
+      font-family:'Capsule X Pro Medium Regular';
+    }
+    .button: hover {
+      color: black;
+    }
+</style>
+    <head>
+    <title> Anthony Scarangello</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href= "myStyle.css" />
+    </head>
+    <header>
+        <img src="Assets/header.png" style="width:25%">
+        <ul>
+             <h3> 
+              <li class="dropdown">
+    <a class="active" href="javascript:void(0)" class="dropbtn">Games</a>
+                    <div class="dropdown-content">
+                      <a href="page1.html">Livestream Defense Scheme</a>
+                      <a href="page2.html">Samurai Slasher</a>
+                      <a href="page3.html">Rear Pew Mirror</a>
+                      <a href="page4.html">Quantum Tic Tac Toe</a>
+                    </div>
+                  </li>
+              <li><a class="active" href="index.html">Home</a></li>
+            </h3>
+        </ul>
+    </header>
+    <body>
+    <div class= "game1">
+    <div class= "img1">
+    <img src="Assets2/game1/1.PNG" style="width:100%">
+      </div>
+     <div class= "imgtext">
+      <h4> Live stream defense scheme </h4>
+        <p> A prototype made for the 2019 Global Game Jam. Players must defend their house with common household items. The game will continually spawn enemies, but if the player enters his twitch info before the game, viewers can enter themselves into the game as an enemy by typing "!join" in the twitch chat. Move with wasd, attack by clicking, use power ups with the space key. </p>
+        </div>
+        </div>
+         <a href="https://github.com/ascarangello/GGJ19" class="button">download game!</a>
+<div class= "gallery" style="width: 45%">
+        <div class="row">
+  <div class="column">
+    <img src="Assets/game1/1.PNG" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="Assets/game1/2.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="Assets/game1/3.PNG" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="Assets/game1/4.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="Assets/game1/1.PNG" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="Assets/game1/2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="Assets/game1/3.PNG" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="Assets/game1/4.png" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="Assets/game1/1.PNG" style="width:100%" onclick="currentSlide(1)" alt=>
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Assets/game1/2.png" style="width:100%" onclick="currentSlide(2)" alt=>
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Assets/game1/3.PNG" style="width:100%" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Assets/game1/4.png" style="width:100%" onclick="currentSlide(4)">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+        </div>
+<footer>
+    <a href="mailto:scarangello.a@husky.neu.edu" class="fa fa-envelope"></a>
+    <a href="https://m.facebook.com/anthony.scarangello" class="fa fa-facebook"></a>
+    <a href="https://github.com/ascarangello" class="fa fa-github-square"></a>
+</footer>
+    </body>
+    </html>
+    
